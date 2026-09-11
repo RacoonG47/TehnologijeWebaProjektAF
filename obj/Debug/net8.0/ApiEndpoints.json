@@ -1,0 +1,239 @@
+[
+  {
+    "ContainingType": "TehnologijeWebaProjektPokemonAndrijaFiringer.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "TehnologijeWebaProjektPokemonAndrijaFiringer.Models.DTO.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TehnologijeWebaProjektPokemonAndrijaFiringer.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/Auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "TehnologijeWebaProjektPokemonAndrijaFiringer.Models.DTO.RegisterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TehnologijeWebaProjektPokemonAndrijaFiringer.Controllers.AuthController",
+    "Method": "RegisterAdmin",
+    "RelativePath": "api/Auth/register-admin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "TehnologijeWebaProjektPokemonAndrijaFiringer.Models.DTO.RegisterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TehnologijeWebaProjektPokemonAndrijaFiringer.Controllers.BattleController",
+    "Method": "CatchPokemon",
+    "RelativePath": "api/Battle/catch",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "TehnologijeWebaProjektPokemonAndrijaFiringer.Models.DTO.CatchAttemptDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TehnologijeWebaProjektPokemonAndrijaFiringer.Controllers.BattleController",
+    "Method": "GenerateTrainer",
+    "RelativePath": "api/Battle/trainer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "archetype",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TehnologijeWebaProjektPokemonAndrijaFiringer.Controllers.BattleController",
+    "Method": "HandleVictory",
+    "RelativePath": "api/Battle/victory",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TehnologijeWebaProjektPokemonAndrijaFiringer.Controllers.BattleController",
+    "Method": "GetWildEncounter",
+    "RelativePath": "api/Battle/wild",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "type",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TehnologijeWebaProjektPokemonAndrijaFiringer.Controllers.EvolutionController",
+    "Method": "CheckEvolution",
+    "RelativePath": "api/Evolution/check/{ownedPokemonId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ownedPokemonId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TehnologijeWebaProjektPokemonAndrijaFiringer.Controllers.EvolutionController",
+    "Method": "EvolvePokemon",
+    "RelativePath": "api/Evolution/execute/{ownedPokemonId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ownedPokemonId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "targetSpeciesId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TehnologijeWebaProjektPokemonAndrijaFiringer.Controllers.TeamController",
+    "Method": "GetTeam",
+    "RelativePath": "api/Team",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TehnologijeWebaProjektPokemonAndrijaFiringer.Controllers.TeamController",
+    "Method": "GetOptions",
+    "RelativePath": "api/Team/options/{ownedPokemonId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ownedPokemonId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TehnologijeWebaProjektPokemonAndrijaFiringer.Controllers.TeamController",
+    "Method": "ReleasePokemon",
+    "RelativePath": "api/Team/release/{ownedPokemonId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ownedPokemonId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TehnologijeWebaProjektPokemonAndrijaFiringer.Controllers.TeamController",
+    "Method": "UpdateSetup",
+    "RelativePath": "api/Team/setup/{ownedPokemonId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ownedPokemonId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "TehnologijeWebaProjektPokemonAndrijaFiringer.Models.DTO.UpdateSetupDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TehnologijeWebaProjektPokemonAndrijaFiringer.Controllers.TeamController",
+    "Method": "GetStorage",
+    "RelativePath": "api/Team/storage",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TehnologijeWebaProjektPokemonAndrijaFiringer.Controllers.TeamController",
+    "Method": "SwapPokemon",
+    "RelativePath": "api/Team/swap/{ownedPokemonId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ownedPokemonId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "addToTeam",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

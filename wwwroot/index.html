@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokemon App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="auth-screen" class="screen active">
+            <div class="box">
+                <h2>Login</h2>
+                <input type="text" id="login-username" placeholder="Username">
+                <input type="password" id="login-password" placeholder="Password">
+                <button onclick="login()">Login</button>
+                <p onclick="showRegister()">Register</p>
+            </div>
+            <div id="register-box" class="box" style="display: none;">
+                <h2>Register</h2>
+                <input type="text" id="reg-username" placeholder="Username">
+                <input type="password" id="reg-password" placeholder="Password">
+                <input type="password" id="reg-confirm-password" placeholder="Confirm Password">
+                <button onclick="register()">Register</button>
+                <p onclick="showLogin()">Back to Login</p>
+            </div>
+        </div>
+
+        <div id="menu-screen" class="screen">
+            <div class="box">
+                <h2>Menu</h2>
+                <button onclick="showScreen('team-screen'); loadTeam()">Team</button>
+                <button onclick="showScreen('storage-screen'); loadStorage()">PC Storage</button>
+                <button onclick="showScreen('wild-screen'); loadTypes()">Wild Encounter</button>
+                <button onclick="showScreen('trainer-screen'); findTrainer()">Trainer Battle</button>
+                <button onclick="logout()">Logout</button>
+            </div>
+        </div>
+
+        <div id="starter-screen" class="screen">
+            <div class="box">
+                <h2>Choose your starter!</h2>
+                <button onclick="selectStarter(1)">Bulbasaur</button>
+                <button onclick="selectStarter(4)">Charmander</button>
+                <button onclick="selectStarter(7)">Squirtle</button>
+            </div>
+        </div>
+
+        <div id="team-screen" class="screen">
+            <div class="box">
+                <h2>Team</h2>
+                <div id="team-list"></div>
+                <div id="setup-box" style="display: none; text-align: left;">
+                    <h3 style="text-align: center;">Setup <span id="setup-pokemon-name"></span></h3>
+                    <h4>Moves (Select up to 4):</h4>
+                    <div id="setup-moves"></div>
+                    <h4>Ability:</h4>
+                    <div id="setup-abilities"></div>
+                    <button onclick="saveSetup()">Save Setup</button>
+                    <button onclick="cancelSetup()">Cancel</button>
+                </div>
+                <div id="evolution-box" style="display: none; text-align: left;">
+                    <h3 style="text-align: center;">Evolve <span id="evolution-pokemon-name"></span></h3>
+                    <div id="evolution-options"></div>
+                    <button onclick="cancelEvolution()">Cancel</button>
+                </div>
+                <button id="team-back-btn" onclick="showScreen('menu-screen')">Back</button>
+            </div>
+        </div>
+
+        <div id="storage-screen" class="screen">
+            <div class="box" style="max-width: 600px;">
+                <h2>PC Storage</h2>
+                <h3>Current Team</h3>
+                <div id="team-storage-list"></div>
+                <h3>PC Box</h3>
+                <div id="pc-storage-list"></div>
+                <button onclick="showScreen('menu-screen')">Back</button>
+            </div>
+        </div>
+
+        <div id="wild-screen" class="screen">
+            <div class="box">
+                <h2>Wild Encounter</h2>
+                <select id="type-select"></select>
+                <button onclick="findWild()">Search</button>
+                <div id="wild-info"></div>
+                <button onclick="showScreen('menu-screen')">Back</button>
+            </div>
+        </div>
+
+        <div id="trainer-screen" class="screen">
+            <div class="box">
+                <h2 id="trainer-title">Trainer Battle</h2>
+                <div id="trainer-info"></div>
+                <button onclick="showScreen('menu-screen')">Back</button>
+            </div>
+        </div>
+
+        <div id="battle-screen" class="screen">
+            <div class="box" style="min-width: 450px;">
+                <h3 id="battle-log-title">Battle!</h3>
+                <div id="enemy-battle-box" class="list-item"></div>
+                <div id="player-battle-box" class="list-item" style="border-left: 4px solid #457b9d;"></div>
+                <div id="battle-actions" style="margin-top: 10px;"></div>
+                <div id="battle-log" style="text-align: left; font-size: 12px; height: 100px; overflow-y: auto; background: #111; padding: 5px; border-radius: 4px; margin-top: 10px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="switch-overlay" style="display:none;"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
